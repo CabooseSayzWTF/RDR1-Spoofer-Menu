@@ -2,8 +2,8 @@
 cd %~dp0
 echo ===========================================
 echo.
-echo          Simple RDR Trainer (360)
-echo               Made by Connor
+echo          RDR Spoofer [JamesTwt/CabooseSayzWTF]
+echo               Base Used Below
 echo.
 echo   https://github.com/connorms/RDR-Trainer
 echo.
