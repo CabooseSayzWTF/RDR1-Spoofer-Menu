@@ -5,10 +5,6 @@
 #define ORIGINAL_EDITION_XBOX 9
 #define UNDEAD_EDITION_XBOX 10
 char *net_player_names[16];
-//Go into spoof.c
-//and also add xuid reset and
-//name reset for vip users
-//must do this for every vip user!
 int   net_selected_player = 1;//change to 0 and test later
 void credthat()
 {
