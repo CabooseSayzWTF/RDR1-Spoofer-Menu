@@ -6,6 +6,11 @@ they aren't loaded in. I'm pretty sure you need to have the npid match the acc n
 The name spoofer can also cause this as I target 4 different names in memory, you might need to remove the code for name2-4 but unsure.
 I stopped messing with this source last year, so feel free to make it work better.
 
+This should work on every version of the game but can not gurantee that. The "Always Show Name" offset will need to be changed for diff versions of the game
+That mod option only works for.<br>
+Xbox - Media ID-5B48AF70 Undead Nightmare<br>
+PS3 - BLUS/BLES GOTY<br>
+
 The title spoofer now actually spoofs the title and will sync to net clients now.
 I also added a few new special chars for the name changer and what not. Regardless this will prob be my last update for this source, so enjoy!
 
