@@ -8,7 +8,7 @@ char *net_player_names[16];
 int   net_selected_player = 1;//change to 0 and test later
 void credthat()
 {
-	print("Base Used: FuhzBot/Connor \n In-Depth Gamertag Editor: JamesTwt \n Local Name Spoofer, Local Title Spoofer, XUID Spoofer, Reset Name/XUID: CabooseSayzWTF", 10000);
+	print("Base Used: FuhzBot/Connor \n In-Depth Gamertag Editor: JamesTwt \n Local Name Spoofer, Title Spoofer, XUID Spoofer, Reset Name/XUID: CabooseSayzWTF", 10000);
 }
 void PrintChat(const char* t12)
 {

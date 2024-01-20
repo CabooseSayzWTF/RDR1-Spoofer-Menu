@@ -1,4 +1,4 @@
-#include "menu_backend.h"
+﻿#include "menu_backend.h"
 #include "menu.h"
 
 #include "mods/mods.h"
@@ -90,7 +90,7 @@ char* numbers[] =
 char* special_characters[] =
 {
     "`",
-    //"�",
+    //"¬",
     "!",
     "$",
     "%",
@@ -118,25 +118,55 @@ char* special_characters[] =
     ".",
     //"<",
     //">",
-    "/",
-    "?",
+	"/",
+	"?",
+	"¡",
+	"ª",
+	"º",
+	"¿",
+	"–",
+	"…",
+	"‰",
+	"™",
     null
 };
 
 char* colours[] =
 {
-    "<red>red</red>",
-    "<orange>orange</orange>",
-    "<yellow>yellow</yellow>",
-    "<green>green</green>",
-    "<blue>blue</blue>",
-    "<purple>purple</purple>",
-    "<brown>brown</brown>",
-    "<sepia>sepia</sepia>",
-    "<grey>grey</grey>",
-    null
+	"<red>red</red>",
+	"<orange>orange</orange>",
+	"<yellow>yellow</yellow>",
+	"<green>green</green>",
+	"<blue>blue</blue>",
+	"<purple>purple</purple>",
+	"<brown>brown</brown>",
+	"<sepia>sepia</sepia>",
+	"<grey>grey</grey>",
+	"<0xFF0000>RGB Red</0x>",
+	"<0x00FF00>RGB Green</0x>",
+	"<0x0000FF>RGB Blue</0x>",
+	"<0x00FFFF>RGB Cyan</0x>",
+	"<0xFF69B4>RGB Pink</0x>",
+	"<0x9D00D7>RGB Purple</0x>",
+	"<0xF7FF00>RGB Yellow</0x>",
+	"<0x3EB489>RGB Mint</0x>",
+	null
 };
 
+char* endcolours[] =
+{
+	"<red>red</red>",
+	"<orange>orange</orange>",
+	"<yellow>yellow</yellow>",
+	"<green>green</green>",
+	"<blue>blue</blue>",
+	"<purple>purple</purple>",
+	"<brown>brown</brown>",
+	"<sepia>sepia</sepia>",
+	"<grey>grey</grey>",
+	"RGB Color",
+	null
+};
 char* button_blips[] =
 {
     "<action>",
@@ -333,7 +363,7 @@ char* numbers2[] =
 char* special_characters2[] =
 {
 	"`",
-	//"�",
+	//"¬",
 	"!",
 	"$",
 	"%",
@@ -363,6 +393,14 @@ char* special_characters2[] =
 	//">",
 	"/",
 	"?",
+	"¡",
+	"ª",
+	"º",
+	"¿",
+	"–",
+	"…",
+	"‰",
+	"™",
 	null
 };
 
@@ -526,16 +564,16 @@ void gtagspoofer2()
     AddScrollableItem("Lowercase Letters", lowercase_letters, add_lowercase_letters, Main, "", &lowercase_letter);
     AddScrollableItem("Numbers", numbers, add_numbers, Main, "", &number);
     AddScrollableItem("Special Characters", special_characters, add_special_characters, Main, "", &special_character);
-    AddScrollableItem("Colours", colours, add_colours, Main, "", &colour);
-    AddScrollableItem("<grey>Button Blips", button_blips, add_button_blips, Main, "", &button_blip);
-    AddScrollableItem("Other Blips", other_blips, add_other_blips, Main, "", &other_blip);
-    AddItem("Add a Space", add_a_space, Main, "");
-    AddItem("Add a New Line", add_a_new_line, Main, "");
-    AddItem("Backspace", backspace, Main, "");
-    AddItem("Reset Buffer", reset_gamertag_buffer, Main, "");
-    AddItem("Print Count", print_gamertag_count, Main, "");
-    AddItem("Print Buffer", print_gamertag_buffer, Main, "");
-    AddItem("Spoof", spoof_gamertag, Main, "");
+	AddScrollableItem("Start Color", colours, add_colours, Main, "", &colour);
+	AddScrollableItem2("<grey>End Color", endcolours, end_colours2, Main, "", &endcolour2);
+	AddScrollableItem("<grey>Button Blips", button_blips, add_button_blips, Main, "", &button_blip);
+	AddScrollableItem("Other Blips", other_blips, add_other_blips, Main, "", &other_blip);
+	AddItem("Add a Space", add_a_space, Main, "");
+	AddItem("Add a New Line", add_a_new_line, Main, "");
+	AddItem("Backspace", backspace, Main, "");
+	AddItem("Reset Buffer", reset_gamertag_buffer, Main, "");
+	AddItem("Name Info", TagInfoPrint, Main, "");
+	AddItem("Spoof Name", spoof_gamertag, Main, "");
 	AddItem("Find New Session", New_session, Main, "");
 }
 // this when scrolling causes the menu to flash alot. sorry. Fix it if you wish.
@@ -562,22 +600,22 @@ void gtagspoofer3()
 //This script should work on any version of rdr for xbox 360, however untested as is.
 void gtagspoofer4()
 {
-	SetHeader("Local Title Editor");
+	SetHeader("Title Editor");
 
-	AddScrollableItem2("Capital Letters", capital_letters2, add_capital_letters2, Main, "", &capital_letter2);
-	AddScrollableItem2("Lowercase Letters", lowercase_letters2, add_lowercase_letters2, Main, "", &lowercase_letter2);
-	AddScrollableItem2("Numbers", numbers2, add_numbers2, Main, "", &number2);
-	AddScrollableItem2("Special Characters", special_characters2, add_special_characters2, Main, "", &special_character2);
-	AddScrollableItem2("Colours", colours2, add_colours2, Main, "", &colour2);
-	AddScrollableItem2("<grey>Button Blips", button_blips2, add_button_blips2, Main, "", &button_blip2);
-	AddScrollableItem2("Other Blips", other_blips2, add_other_blips2, Main, "", &other_blip2);
+	AddScrollableItem2("Capital Letters", capital_letters, add_capital_letters2, Main, "", &capital_letter2);
+	AddScrollableItem2("Lowercase Letters", lowercase_letters, add_lowercase_letters2, Main, "", &lowercase_letter2);
+	AddScrollableItem2("Numbers", numbers, add_numbers2, Main, "", &number2);
+	AddScrollableItem2("Special Characters", special_characters, add_special_characters2, Main, "", &special_character2);
+	AddScrollableItem2("Start Color", colours, add_colours2, Main, "", &colour2);
+	AddScrollableItem2("<grey>End Color", endcolours, end_colours, Main, "", &endcolour);
+	AddScrollableItem2("<grey>Button Blips", button_blips, add_button_blips2, Main, "", &button_blip2);
+	AddScrollableItem2("Other Blips", other_blips, add_other_blips2, Main, "", &other_blip2);
 	AddItem("Add a Space", add_a_space2, Main, "");
 	AddItem("Backspace", backspace2, Main, "");
 	AddItem("Reset Buffer", reset_gamertag_buffer2, Main, "");
-	AddItem("Print Count", print_gamertag_count2, Main, "");
-	AddItem("Print Buffer", print_gamertag_buffer2, Main, "");
-	AddBoolItem("Always Show Title", shownametitle, Main, "", showname);
-	AddBoolItem("Spoof Title", spoof_title, Main, "", titlespoof);
+	AddItem("Title Info", TitleInfoPrint, Main, "");
+	AddItem("Spoof Title", spoof_title, Main, "");
+	AddItem("Find New Session", New_session, Main, "");
 }
 void NetPlayerFreeze()
 {
@@ -657,10 +695,11 @@ void Main()
 {
 	AUTOSCROLL = false;//jank fix for scrolling for xuid editor shit
 	SetHeader("Spoofer");
-	AddSubmenu("Gamertag Editor", gtagspoofer2, nullptr);
+	AddSubmenu("Name Editor", gtagspoofer2, nullptr);
 	AddSubmenu("XUID Editor", gtagspoofer3, nullptr);
 	AddSubmenu("Title Editor", gtagspoofer4, nullptr);
 	AddSubmenu("Name/XUID Stealer", NetPlayerFreeze, nullptr);
+	AddBoolItem("Always Show Name", shownametitle, nullptr, "", showname);
 	AddItem("Reset Name", resetname, nullptr, "");
 	AddItem("Reset XUID", resetxuid, nullptr, "");
 	AddItem("Find New Session", New_session, nullptr, "");
