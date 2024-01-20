@@ -14,11 +14,11 @@ Give credits where due if you edit this menu or showcase it etc.
 Base Used: Connor/Fuhzbot Trainer  
 Name Spoofer/Xuid Stealer: JamesTwt  
   
-CabooseSayzWTF  
-Force Save XUID/NPID/Name on Menu Open  
-XUID Editor
-NPID Editor
-Local Spoof Net Player Names(only you see this)  
-Title Spoofer (Now syncs to net clients)
-Always Show Title/Name  
-Reset Name/XUID/NPID Back To Normal  
+CabooseSayzWTF<br>
+Force Save XUID/NPID/Name on Menu Open <br>
+XUID Editor <br>
+NPID Editor <br>
+Local Spoof Net Player Names(only you see this)   <br>
+Title Spoofer (Now syncs to net clients) <br>
+Always Show Title/Name   <br>
+Reset Name/XUID/NPID Back To Normal   <br>
